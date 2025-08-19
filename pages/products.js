@@ -8,17 +8,21 @@ export default function Products() {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      let { data, error } = await supabase
-        .from("products")
-        .select("id, name, description, price, image_url");
+  let { data, error } = await supabase
+    .from("products")
+    .select("id, name, description, price, image_url");
 
-      if (error) {
-        console.error("Error fetching products:", error.message);
-      } else {
-        setProducts(data);
-      }
-      setLoading(false);
-    };
+  // 🔍 Debug logs
+  console.log("Products data:", data);
+  console.log("Supabase error:", error);
+
+  if (error) {
+    console.error("Error fetching products:", error.message);
+  } else {
+    setProducts(data);
+  }
+  setLoading(false);
+};
 
     fetchProducts();
   }, []);
