@@ -1,33 +1,34 @@
-// pages/products.js
 import { useEffect, useState } from "react";
 import supabase from "../lib/supabaseClient";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     const fetchProducts = async () => {
-  let { data, error } = await supabase
-    .from("products")
-    .select("id, name, description, price, image_url");
+      let { data, error } = await supabase
+        .from("products")
+        .select("id, name, description, price, image_url");
 
-  // 🔍 Debug logs
-  console.log("Products data:", data);
-  console.log("Supabase error:", error);
-
-  if (error) {
-    console.error("Error fetching products:", error.message);
-  } else {
-    setProducts(data);
-  }
-  setLoading(false);
-};
+      if (error) {
+        console.error("Supabase error:", error.message);
+        setErrorMessage(error.message);
+      } else {
+        console.log("Products data:", data);
+        setProducts(data);
+      }
+      setLoading(false);
+    };
 
     fetchProducts();
   }, []);
 
   if (loading) return <p style={{ padding: "1rem" }}>Loading products...</p>;
+
+  if (errorMessage)
+    return <p style={{ padding: "1rem", color: "red" }}>⚠️ {errorMessage}</p>;
 
   return (
     <div style={{ padding: "2rem" }}>
@@ -55,10 +56,17 @@ export default function Products() {
               <img
                 src={product.image_url}
                 alt={product.name}
-                style={{ width: "100%", height: "150px", objectFit: "cover", marginBottom: "0.5rem" }}
+                style={{
+                  width: "100%",
+                  height: "150px",
+                  objectFit: "cover",
+                  marginBottom: "0.5rem",
+                }}
               />
               <h3>{product.name}</h3>
-              <p style={{ fontSize: "0.9rem", color: "#555" }}>{product.description}</p>
+              <p style={{ fontSize: "0.9rem", color: "#555" }}>
+                {product.description}
+              </p>
               <p style={{ fontWeight: "bold" }}>₱{product.price}</p>
               <button
                 style={{
