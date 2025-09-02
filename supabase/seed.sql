@@ -1,0 +1,15 @@
+insert into products (name, description, price, image_url, stock) values
+('Amazing Acai Berry Extract with Collagen', 'Acai berry + collagen for skin and health', 700.00, 'https://drive.google.com/uc?export=view&id=1GQhMDJN3CZ0YfKA4VRZBo9l_17CeYYyw', 15),
+('Amazing Grape Juice with Garcinia Cambogia', 'Grape juice with garcinia for wellness', 900.00, 'https://drive.google.com/uc?export=view&id=1hRxQNs11H6WO1bXU9VMdpCmD3AVjoiTE', 15),
+('Amazing Pure Organic Barley Powder', 'Pure organic barley powder', 1000.00, 'https://drive.google.com/uc?export=view&id=1iDLv76v17P5_3Vtpsvr21cRAAXL_B1J2', 15),
+('Amazing Pure Organic Barley Capsule', 'Barley capsules', 1750.00, 'https://drive.google.com/uc?export=view&id=1iZWFSzUjra_G0UBAhohuF1x5Bi9ollCR', 15),
+('Amazing Immunergy', 'Immunity support supplement', 500.00, 'https://drive.google.com/uc?export=view&id=1Ch6h8CJmAVURgyNCU-gpx8_BSLXNUkIL', 15),
+('Amazing Choco-Barley', 'Chocolate barley mix', 1000.00, 'https://drive.google.com/uc?export=view&id=1kC_SRKglT4jJ9I-K3-i1ql33bWYiPq5Y', 15),
+('Amazing Coffee Mix with Tongkat Ali', 'Coffee mix with tongkat ali', 750.00, 'https://drive.google.com/uc?export=view&id=1J0JjSm2WcPxOuBiWfcsH3JfO8Wk_OI2f', 15),
+('Amazing Coffee Mix with Glutathione', 'Coffee mix with glutathione', 750.00, 'https://drive.google.com/uc?export=view&id=1CXzV5upZyUPY7KK7I1LfaB1zA6_VArWT', 15),
+('Amazing Black Coffee Mix with Organic Barley', 'Black coffee mix', 300.00, 'https://drive.google.com/uc?export=view&id=1AmMdgvSE1dgC3ameAcK5kjt9fOfFfqSl', 15),
+('Amazing Cafe Mocha with Barley & Alkaline', 'Cafe mocha', 750.00, 'https://drive.google.com/uc?export=view&id=1-LC49WkO7CTkBkKUnOVjMH9kW9G3uyij', 15),
+('Amazing Cafe Latte with Barley & Alkaline', 'Cafe latte', 750.00, 'https://drive.google.com/uc?export=view&id=1yBJM__ACJzB2dswPEgDzOLCLv1A2ZVmn', 15),
+('Amazing Slim Caffe Macchiato', 'Slim caffe macchiato', 375.00, 'https://drive.google.com/uc?export=view&id=10EZ80QQURYRm-JTi7tfsvlfQa0Lj497N', 15),
+('Amazing White Glutathione', 'White glutathione', 2950.00, 'https://drive.google.com/uc?export=view&id=1SH7NaBto35i4wyxbnj-poTUpUdgNh4dK', 15),
+('Amazing Organic Premium Barley Soap', 'Premium barley soap', 750.00, 'https://drive.google.com/uc?export=view&id=1CuJcCMvBQFHEW-3qnpA1vmG2qEJg0Jap', 15);
